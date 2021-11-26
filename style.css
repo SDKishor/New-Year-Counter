@@ -1,0 +1,106 @@
+@import url("https://fonts.googleapis.com/css2?family=Poppins:wght@100;400;600;700&display=swap");
+
+:root {
+  --primary-color: rgba(255, 255, 255, 0.8);
+  --year-color: hsla(188, 100%, 88%, 0.8);
+}
+
+*,
+*::after,
+*::before {
+  margin: 0;
+  box-sizing: border-box;
+  padding: 0;
+}
+
+body {
+  font-family: "Poppins", sans-serif;
+  background-image: url(https://images.unsplash.com/photo-1503315883035-c3fb190b434e?ixlib=rb-1.2.1&ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&auto=format&fit=crop&w=988&q=80);
+  background-position: center;
+  background-repeat: no-repeat;
+  background-size: cover;
+  min-height: 100vh;
+}
+
+.container {
+  width: 100vw;
+  height: 100vh;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  text-align: center;
+  background-color: rgba(0, 0, 0, 0.35);
+}
+.upper_content {
+  color: var(--primary-color);
+  width: 100%;
+  height: 50%;
+
+  display: flex;
+  flex-direction: column;
+  justify-content: end;
+}
+
+h1 {
+  text-transform: uppercase;
+  font-size: 3.5rem;
+  word-spacing: 5px;
+  padding: 0.01em 0.3em;
+  border-radius: 10px;
+  text-shadow: 5px 3px rgba(0, 0, 0, 0.55);
+}
+.upper_content span {
+  color: var(--year-color);
+  font-size: 5rem;
+  text-shadow: 5px 3px rgba(45, 55, 56, 0.55);
+}
+
+.lower_content {
+  color: var(--primary-color);
+  width: 80%;
+  height: 50%;
+  padding-top: 5%;
+  font-weight: 400;
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  margin-bottom: 15%;
+  margin-bottom: 20%;
+}
+.lower_content div {
+  display: flex;
+  flex-direction: column;
+  margin-bottom: 10px;
+  align-items: center;
+  justify-content: center;
+}
+.lower_content div div {
+  width: 90px;
+  height: 90px;
+  border-radius: 10px;
+  background-color: rgba(255, 255, 255, 0.55);
+  box-shadow: 5px 3px 2px rgba(45, 55, 56, 0.85);
+}
+
+.big_text {
+  font-size: 4rem;
+  font-weight: 700;
+  color: rgba(0, 0, 0, 0.5);
+}
+
+.lower_content div span {
+  font-size: 1.3rem;
+  letter-spacing: 3px;
+}
+
+@media screen and (min-width: 500px) {
+  body {
+    background-position: bottom 30% center;
+  }
+
+  .lower_content {
+    width: 50%;
+    grid-template-columns: 1fr 1fr 1fr 1fr;
+    margin-bottom: 5%;
+    align-items: flex-start;
+  }
+}
